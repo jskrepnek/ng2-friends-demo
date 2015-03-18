@@ -1,20 +1,40 @@
-<style>@import "/bower_components/angular-material/angular-material.css";</style>
-
+<style>
+@import "/bower_components/angular-material/angular-material.css";
+</style>
 <section id="friends-app">
-
-  <header id="header">
-  	<md-content class="md-padding">
-  		<h1>My Friends</h1>
-  	</md-content>    
-  </header>
-
-  <section id="main">
-  </section>
-
-  <footer id="footer">
-  </footer>
-
+    <header id="header">
+        <md-content class="md-padding">
+            <h1>My Friends</h1>
+        </md-content>
+    </header>
+    <section id="main">
+        <md-content>
+            <md-card>
+                <md-item>
+                    <md-item-content>
+                        <div class="md-tile-left">
+                            <img src="icon-person-128.png" class="face">
+                        </div>
+                        <div class="md-tile-content">
+                            <h2>Name</h2>
+                            <h3>Age Years Old</h3>
+                            <div>
+                                <h4>
+                                  <button>Toggle></button>
+                                </h4>
+                                <div>
+                                    <p>Where we met: in this place</p>
+                                    <p>How we met: this way</p>
+                                </div>
+                            </div>
+                        </div>
+                    </md-item-content>
+                </md-item>
+            </md-card>
+        </md-content>
+    </section>
+    <footer id="footer">
+    </footer>
 </section>
-
 <footer id="info">
 </footer>
