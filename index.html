@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>ng2do</title>
+  <title>NG Friends</title>
   <style media="screen">
   html,
   body {
@@ -23,10 +23,11 @@
     font-smoothing: antialiased;
   }
   </style>
+
+  <link href="/bower_components/angular-material/angular-material.css" rel="stylesheet" type="text/css"/>  
+
 </head>
 <body>
-  <todo-app>Loading...</todo-app>
-
   <!-- loading es6-module-loader.js shims promises, so it has to come before zone.js -->
   <script src="/deps/traceur.js"></script>
   <script src="/deps/system.js"></script>
@@ -35,17 +36,15 @@
   <script src="/deps/long-stack-trace-zone.js"></script>
 
   <script src="/ng/rtts_assert/rtts_assert.js"></script>
-  <script src="/deps/firebase/firebase.js"></script>
 
   <script>
     System.paths = {
       '*':'/ng/*.js',
       'di':'angular2/di',
       'annotations':'annotations.js',
-      'todo': 'todo.js',
-      'firebase/angularfire': 'deps/firebase/angularfire.js'
+      'friends': 'friends.js',
     };
-    System.import('todo').then(function(module) {
+    System.import('friends').then(function(module) {
       module.main();
     }, console.log.bind(console));
   </script>
