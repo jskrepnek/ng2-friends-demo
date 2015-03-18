@@ -9,22 +9,22 @@
     </header>
     <section id="main">
         <md-content>
-            <md-card>
+            <md-card !foreach="#friend in friends">
                 <md-item>
                     <md-item-content>
                         <div class="md-tile-left">
                             <img src="icon-person-128.png" class="face">
                         </div>
                         <div class="md-tile-content">
-                            <h2>Name</h2>
-                            <h3>Age Years Old</h3>
+                            <h2>{{friend.name}}</h2>
+                            <h3>{{friend.age}} Years Old</h3>
                             <div>
                                 <h4>
-                                  <button>Toggle</button>
+                                  <button (click)="toggleDetails(friend)">{{ friend.showDetails ? 'Hide Details' : 'Show Details'}}</button>
                                 </h4>
-                                <div>
-                                    <p>Where we met: in this place</p>
-                                    <p>How we met: this way</p>
+                                <div [hidden]="!friend.showDetails">
+                                    <p>Where we met: {{friend.whereWeMet}}</p>
+                                    <p>How we met: {{friend.howWeMet}}</p>
                                 </div>
                             </div>
                         </div>
