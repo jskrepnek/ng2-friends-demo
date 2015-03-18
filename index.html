@@ -2,32 +2,13 @@
 <html>
 <head>
   <title>NG Friends</title>
-  <style media="screen">
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.4em;
-    background: #eaeaea url('/deps/css/bg.png');
-    color: #4d4d4d;
-    width: 550px;
-    margin: 0 auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -ms-font-smoothing: antialiased;
-    -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-  }
-  </style>
 
   <link href="/bower_components/angular-material/angular-material.css" rel="stylesheet" type="text/css"/>
 
 </head>
-<body>
+<body layout="column">
+  <friends-app></friends-app>
+  
   <!-- loading es6-module-loader.js shims promises, so it has to come before zone.js -->
   <script src="/deps/traceur.js"></script>
   <script src="/deps/system.js"></script>
